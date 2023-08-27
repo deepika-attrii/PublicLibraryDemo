@@ -43,28 +43,12 @@ afterEvaluate {
     publishing {
         publications {
             mavenJava(MavenPublication) {
-                from components.release
-
                 groupId = 'com.github.deepika-attrii'
                 artifactId = 'mylibrary'
                 version = '2.1'
+
+                from components.release
             }
-        }
-        repositories {
-            mavenLocal()
         }
     }
 }
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            mavenJava(MavenPublication) {
-//                groupId = 'com.github.deepika-attrii'
-//                artifactId = 'mylibrary'
-//                version = '1.9'
-//
-//                from components.release
-//            }
-//        }
-//    }
-//}

@@ -42,13 +42,24 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
-                from components.release
-
-                groupId = 'deepika-attrii'
+            mavenJava(MavenPublication) {
+                groupId = 'com.github.deepika-attrii'
                 artifactId = 'mylibrary'
-                version = '1.2'
+                version = '1.3'
+
+                from components.release
             }
         }
     }
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//
+//                groupId = 'deepika-attrii'
+//                artifactId = 'mylibrary'
+//                version = '1.2'
+//            }
+//        }
+//    }
 }

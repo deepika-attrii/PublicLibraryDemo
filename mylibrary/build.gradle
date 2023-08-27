@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.library' version '8.1.1'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
@@ -43,12 +43,32 @@ afterEvaluate {
     publishing {
         publications {
             mavenJava(MavenPublication) {
+                from components.release
+
                 groupId = 'com.github.deepika-attrii'
                 artifactId = 'mylibrary'
                 version = '1.9'
-
-                from components.release
             }
         }
+        repositories {
+            mavenLocal()
+        }
     }
+}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            mavenJava(MavenPublication) {
+//                groupId = 'com.github.deepika-attrii'
+//                artifactId = 'mylibrary'
+//                version = '1.9'
+//
+//                from components.release
+//            }
+//        }
+//    }
+//}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }

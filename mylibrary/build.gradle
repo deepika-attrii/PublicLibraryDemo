@@ -45,7 +45,7 @@ afterEvaluate {
             mavenJava(MavenPublication) {
                 groupId = 'com.github.deepika-attrii'
                 artifactId = 'mylibrary'
-                version = '1.8'
+                version = '1.9'
 
                 from components.release
             }

@@ -1,0 +1,8 @@
+query GetSeries($page: Int, $limit: Int) {
+    getSeries(page: $page, limit: $limit) {
+        code
+        status
+        msg
+        data
+    }
+}

@@ -1,0 +1,7 @@
+schema: AcademyAPISchema.graphqls
+extensions:
+  endpoints:
+    Default GraphQL Endpoint:
+      url: https://api.academy.graphql.dev.vntech.io/graphql/
+
+
